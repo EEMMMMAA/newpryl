@@ -14,7 +14,7 @@ namespace Game3
         protected Texture2D tex;
 
         public void update() { }
-        public virtual void Draw (SpriteBatch spritebatch)
+        public virtual void Draw(SpriteBatch spritebatch)
         {
             spritebatch.Draw(tex, pos, Color.AliceBlue);
         }
@@ -30,4 +30,5 @@ namespace Game3
 
 
         }
+    }
 }

@@ -11,6 +11,7 @@ namespace Game3
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        spelare waluigi;
 
         public Game1()
         {
@@ -29,6 +30,7 @@ namespace Game3
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            waluigi = new spelare();
         }
 
         /// <summary>
@@ -39,6 +41,7 @@ namespace Game3
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            LaddaIn.Ladda(Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -74,7 +77,10 @@ namespace Game3
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            spriteBatch.Begin();
+            waluigi.Draw(spriteBatch);
+            spriteBatch.End();
+            
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
